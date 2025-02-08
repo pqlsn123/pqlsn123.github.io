@@ -1,0 +1,80 @@
+/* 通用样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 整体背景采用渐变并添加动画效果 */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff0078, #7a00ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+
+/* 渐变背景动画 */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 容器样式 */
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 标题样式与炫酷的动画效果 */
+.title {
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  animation: shine 2s ease-in-out infinite alternate-reverse;
+}
+
+/* 发光动画 */
+@keyframes shine {
+  from {
+    text-shadow: 0 0 10px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+}
+
+/* 自我介绍段落 */
+.introduction {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* 按钮样式 */
+button {
+  background: #ff0078;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff4569;
+}
